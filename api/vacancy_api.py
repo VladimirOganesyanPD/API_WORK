@@ -19,6 +19,7 @@ class HeadHunterAPI(VacancyAPI):
         params = {'text': search_query}
         response = requests.get(url, params=params)
         if response.status_code == 200:
-            return response.json()['items']
+            vacancies = response.json()['items']
+            return vacancies
         else:
             return []
