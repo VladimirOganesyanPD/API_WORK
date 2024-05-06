@@ -1,5 +1,9 @@
 import unittest
 
+from models.vacancy import Vacancy
+from storage.vacancy_saver import JSONSaver
+
+
 class TestJSONSaverClass(unittest.TestCase):
     def setUp(self):
         self.json_saver = JSONSaver(filename='test_vacancies.json')
